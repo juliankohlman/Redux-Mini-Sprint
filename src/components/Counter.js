@@ -19,13 +19,16 @@ class Counter extends Component {
         // should decrement or increment accordingly
         return (
             <p>
+                {/*onsole.log({...this.props})*/}
+                {console.log(this.props)}
                 Clicked: {this.props.count} times
                 {" "}
-                <button onClick={() => /* Fill me in */ }>
+            {/* Why don't you use this.props.count.increment() */}
+                <button onClick={() => this.props.increment()/* Fill me in */ }>
                     +
                 </button>
                 {" "}
-                <button onClick={() => /* Fill me in */ }>
+                <button onClick={ () => this.props.decrement()/* Fill me in */ }>
                     -
                 </button>
                 {" "}
@@ -43,13 +46,14 @@ class Counter extends Component {
     }
 }
 
-// The mapStateToProps function specifies which portion of the 
-// state tree this component needs to receive. In this case, 
+// The mapStateToProps function specifies which portion of the
+// state tree this component needs to receive. In this case,
 // since our redux store is only storing the value of the count,
 // this component receives the whole state. In a more complex
 // redux application, though, it would receive only the relevant
 // parts it needs from the state object.
 const mapStateToProps = (state) => {
+    // console.log(state);
     return {
         count: state
     };
