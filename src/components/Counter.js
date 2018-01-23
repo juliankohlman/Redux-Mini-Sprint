@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
-import { increment, decrement, incrementIfOdd } from '../actions';
+import * as actions from '../actions';
 
 class Counter extends Component {
     // incrementIfOdd = () => {
@@ -64,4 +64,4 @@ const mapStateToProps = (state) => { // used inside react-redux: take in state r
 // is only a dumb React component. We pass in all of the functions that
 // are reliant on Redux, along with the component itself, so that Redux
 // makes itself known to this component.
-export default connect(mapStateToProps, { increment, decrement, incrementIfOdd })(Counter);// takes in obj, actions, component
+export default connect(mapStateToProps, actions)(Counter);// takes in obj, actions, component

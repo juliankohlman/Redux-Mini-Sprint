@@ -15,12 +15,16 @@
   Be sure to console.log() both references to ensure that they are pointing to different objects.
 */
 const person = {
-  name: 'Julian',
-  age: 33,
-  hometown:'Pittsburgh'
+  name: 'Luke',
+  age: 30,
+  hometown:'Tatooine'
 }
 
-const newPerson = Object.assign({}, person, { name: 'bob', age: 70 });
+// const newPerson = Object.assign({}, person, { name: 'bob', age: 70 });
+const newPerson =  {
+  ...person,
+  age: 55
+}
 
 console.log(person);
 console.log(newPerson);
@@ -53,5 +57,6 @@ const studentScores = {
 }
 
 const studentAverage = Object.assign({}, {avg: studentScores.scores.filter(score => score > 34)})
+
 console.log(studentScores);
 console.log(studentAverage);
