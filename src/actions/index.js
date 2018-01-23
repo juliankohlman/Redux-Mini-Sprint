@@ -11,10 +11,14 @@ export const DECREMENT = 'DECREMENT';
 
 export const increment = () => {
    // Fill in this function
+   // payload is a part of package: packet-obj same thing
+   // payload ==> data in addition to the type if there is any
    return {
     type: 'INCREMENT'
    }
 };
+
+// new action MULTIPLY
 
 
 export const decrement = () => {

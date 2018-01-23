@@ -19,7 +19,7 @@ class Counter extends Component {
         // should decrement or increment accordingly
         return (
             <p>
-                {/*onsole.log({...this.props})*/}
+                {/*console.log({...this.props})*/}
                 {console.log(this.props)}
                 Clicked: {this.props.count} times
                 {" "}
@@ -36,9 +36,9 @@ class Counter extends Component {
                 around to implementing the extra credit functions */}
                 {/* <button onClick={this.incrementIfOdd}>
                     Increment if odd
-                </button>
+                </button>*/}
                 {" "}
-                <button onClick={this.incrementAsync}>
+                {/*<button onClick={this.incrementAsync}>
                     Increment async
                 </button>  */}
             </p>
@@ -52,7 +52,7 @@ class Counter extends Component {
 // this component receives the whole state. In a more complex
 // redux application, though, it would receive only the relevant
 // parts it needs from the state object.
-const mapStateToProps = (state) => {
+const mapStateToProps = (state) => { // used inside react-redux: take in state returns obj set = props
     // console.log(state);
     return {
         count: state
@@ -64,4 +64,4 @@ const mapStateToProps = (state) => {
 // is only a dumb React component. We pass in all of the functions that
 // are reliant on Redux, along with the component itself, so that Redux
 // makes itself known to this component.
-export default connect(mapStateToProps, { increment, decrement })(Counter);
+export default connect(mapStateToProps, { increment, decrement })(Counter);// takes in obj, actions, component

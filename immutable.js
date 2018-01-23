@@ -32,8 +32,8 @@ console.log(newPerson);
 */
 
 const superHeroes = ['black panther', 'captain america', 'batman'];
-const superVillains = ['deathstroke', '']
-
+const superVillains = ['deathstroke', 'lady deathstrike', 'lex luthor'];
+const combinedSupers = [ ...superHeroes, ...superVillains];
 console.log(superHeroes);
 console.log(superVillains);
 console.log(combinedSupers);
@@ -46,5 +46,12 @@ console.log(combinedSupers);
   The new object should filter out any scores that are < 34 Array.filter should be used here.
 */
 
-// console.log(studentScores);
-// console.log(studentAverage);
+const studentScores = {
+  name: 'Clark Kent',
+  age: 30,
+  scores: [1, 10, 20, 35, 40, 50]
+}
+
+const studentAverage = Object.assign({}, {avg: studentScores.scores.filter(score => score > 34)})
+console.log(studentScores);
+console.log(studentAverage);
