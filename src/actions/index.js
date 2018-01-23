@@ -1,6 +1,6 @@
 export const INCREMENT = 'INCREMENT';
 export const DECREMENT = 'DECREMENT';
-
+export const INCREMENTIFODD = 'INCREMENTIFODD';
 // Our action creators will return
 // an action packet that our reducer will
 // receive. What does the action packet look like?
@@ -18,7 +18,11 @@ export const increment = () => {
    }
 };
 
-// new action MULTIPLY
+export const incrementIfOdd = () => {
+  return {
+    type: 'INCREMENTIFODD'
+  }
+}
 
 
 export const decrement = () => {
